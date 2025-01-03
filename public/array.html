@@ -14,7 +14,7 @@
       document.addEventListener("DOMContentLoaded", function(event) {
         const container = document.getElementById("container");
         data.forEach(function(elmt) {
-          container.appendChild(dom("div", [elmt]));
+          container.appendChild(dom("div", { class: "element" }, [elmt]));
         });
       });
     </script>
