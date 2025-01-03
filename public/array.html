@@ -1,1 +1,23 @@
-
+<html>
+  <head>
+    <script>
+      /* wee dom function from https://www.crockford.com/domjs.html */                                                       
+      function dom(tag, attributes, nodes = []) {                         
+          const node = document.createElement(tag);                   
+          Object.entries(attributes).forEach(function ([k, v]) {
+              node.setAttribute(k, v);
+          });            
+          node.append(...nodes);                        
+          return node;                        
+      }     
+      const data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+      document.addEventListener("DOMContentLoaded", function(event) {
+        const container = document.getElementById("container");
+        data.forEach(function(elmt) {
+          container.appendChild(dom("div", [elmt]));
+        });
+      });
+    </script>
+  </head>
+  <body><div id="container" style="height: 500px"></div></body>
+</html>
