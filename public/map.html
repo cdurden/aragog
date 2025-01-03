@@ -13,7 +13,7 @@
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+        }).addTo(map);
       var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg';
       var errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
       var altText = 'Image of Newark, N.J. in 1922. Source: The University of Texas at Austin, UT Libraries Map Collection.';
@@ -25,6 +25,7 @@
           alt: altText,
           interactive: true
       }).addTo(map);
+      });
     </script>
   </head>
   <body><div id="map" style="height: 500px"></div></body>
